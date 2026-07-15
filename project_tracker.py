@@ -17,3 +17,4 @@ def calculatingmetric():
   print("Totalhourexpended:",Totalhourexpended)
   print("Projecthoursremaining:",Projecthoursremaining)
   calculatingmetric()
+  from datetime import datetime; print("DEBUG: System runtime timestamp:", datetime.now().isoformat())
