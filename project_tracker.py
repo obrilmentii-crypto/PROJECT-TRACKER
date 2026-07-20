@@ -10,6 +10,7 @@ def calculatingmetric():
     Totalhourexpended=(completedtask*avghourspertask)
     Projecthoursremaining=(blockedtask*avghourspertask)
 
+<<<<<<< HEAD
     print("project:",projectname)
     print("Netactivetask:",Netactivetask)
     print("Truecompletionrate:",Truecompletionrate)
@@ -18,3 +19,12 @@ def calculatingmetric():
     
     from datetime import datetime; print("DEBUG: System runtime timestamp:", datetime.now().isoformat())
 calculatingmetric()
+=======
+  print("project:",projectname)
+  print("Netactivetask:",Netactivetask)
+  print("Truecompletionrate:",Truecompletionrate)
+  print("Totalhourexpended:",Totalhourexpended)
+  print("Projecthoursremaining:",Projecthoursremaining)
+  calculatingmetric()
+  from datetime import datetime; print("DEBUG: System runtime timestamp:", datetime.now().isoformat())
+>>>>>>> feat/library-requirements
