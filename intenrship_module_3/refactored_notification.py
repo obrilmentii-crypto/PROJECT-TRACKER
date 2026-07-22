@@ -11,19 +11,22 @@ class  NotificationStrategy(ABC):
 # Email strategie
 class EmailNotificationStrategy(NotificationStrategy):
 
-     def dispatch(self, recipient, message):
-         if "@" not in recipient:
-                print("Invalid Email Address!")
-         return
-         print(f'[EMAIL SERVER] Sending "{message}" to {recipient}')
+    def dispatch(self, recipient, message):
+        if "@" not in recipient:
+            print("Invalid Email Address!")
+            return
+     
+        print(f'[EMAIL SERVER] Sending "{message}" to {recipient}')
 
 # SMS Strategie 
 class SMSNotificationStrategy(NotificationStrategy):
-     def dispatch(self, recipient, message):
-         if len(recipient) < 10:
-                print("Invalid Phone Number!")
-         return
-         print(f'[TWILIO SMS GATEWAY] Dispatching SMS to {recipient}: {message}')
+     
+    def dispatch(self, recipient, message):
+        if len(recipient) < 10:
+           print("Invalid Phone Number!")
+           return
+     
+        print(f'[TWILIO SMS GATEWAY] Dispatching SMS to {recipient}: {message}')
 
 # Push strategie         
 class PushNotificationStrategy(NotificationStrategy):
